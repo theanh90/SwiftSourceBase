@@ -1,0 +1,6 @@
+Template include:
++ Multiple target with multiple bundle id, app icon, infoPlist...
+	https://www.appcoda.com/using-xcode-targets/
++ Logger with log type icon
++ Alamofire intergrate with Rxswift
++ Multiple languages support
