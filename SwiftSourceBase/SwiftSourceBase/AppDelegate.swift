@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Localize
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Logger.info("Finish launch at AppDelegate")
         Logger.warning("Finish launch at AppDelegate")
         Logger.error("Finish launch at AppDelegate")
+        
+        localizeConfig()
         
         return true
     }
@@ -47,5 +50,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+// MARK: - Localize
+extension AppDelegate {
+    private func localizeConfig() {
+        // Set your localize provider.
+        Localize.update(provider: .strings)
+        // Set your file name
+        Localize.update(fileName: "Localizable")
+        // Set your default languaje.
+        Localize.update(defaultLanguage: "en")
+        Localize.update(language: "vi-VN")
+    }
 }
 

@@ -13,35 +13,83 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftSourceBase" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DevSwiftSourceBase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ahihi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHy-yw-Eh0">
-                                <rect key="frame" x="168" y="333" width="39" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHy-yw-Eh0">
+                                <rect key="frame" x="169.5" y="70" width="36.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="hello"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autoLocalize" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Server" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgf-sv-GHk">
-                                <rect key="frame" x="162.5" y="375" width="50" height="21"/>
+                                <rect key="frame" x="162.5" y="101" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="greeting" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lmj-TR-50M">
+                                <rect key="frame" x="5" y="132" width="365" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkx-kj-4KA">
+                                <rect key="frame" x="86" y="162.5" width="203" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XH-vn-MLN">
+                                        <rect key="frame" x="0.0" y="4.5" width="56" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tjG-zb-mWN">
+                                        <rect key="frame" x="66" y="-0.5" width="51" height="31"/>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiếng Việt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiS-fE-25n">
+                                        <rect key="frame" x="125" y="4.5" width="78" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="OiS-fE-25n" firstAttribute="centerY" secondItem="tjG-zb-mWN" secondAttribute="centerY" id="CbU-ck-Pv9"/>
+                                    <constraint firstItem="1XH-vn-MLN" firstAttribute="centerY" secondItem="xkx-kj-4KA" secondAttribute="centerY" id="K3l-Z6-q7c"/>
+                                    <constraint firstItem="1XH-vn-MLN" firstAttribute="leading" secondItem="xkx-kj-4KA" secondAttribute="leading" id="bLn-AF-NXe"/>
+                                    <constraint firstItem="tjG-zb-mWN" firstAttribute="leading" secondItem="1XH-vn-MLN" secondAttribute="trailing" constant="10" id="ddh-fs-gKm"/>
+                                    <constraint firstAttribute="trailing" secondItem="OiS-fE-25n" secondAttribute="trailing" id="hMp-bl-lln"/>
+                                    <constraint firstAttribute="height" constant="30" id="n2k-5t-cbE"/>
+                                    <constraint firstItem="tjG-zb-mWN" firstAttribute="centerY" secondItem="1XH-vn-MLN" secondAttribute="centerY" id="nbs-bz-aQS"/>
+                                    <constraint firstItem="OiS-fE-25n" firstAttribute="leading" secondItem="tjG-zb-mWN" secondAttribute="trailing" constant="10" id="t5M-5B-2cO"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.30741450393634984" green="0.66666668653488159" blue="0.62812916183286138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Dgf-sv-GHk" firstAttribute="top" secondItem="YHy-yw-Eh0" secondAttribute="bottom" constant="21" id="0ZH-uB-VWG"/>
-                            <constraint firstItem="YHy-yw-Eh0" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Hr8-5b-8Rp"/>
+                            <constraint firstItem="Dgf-sv-GHk" firstAttribute="top" secondItem="YHy-yw-Eh0" secondAttribute="bottom" constant="10" id="0ZH-uB-VWG"/>
+                            <constraint firstItem="Lmj-TR-50M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="980-BY-7HO"/>
                             <constraint firstItem="Dgf-sv-GHk" firstAttribute="centerX" secondItem="YHy-yw-Eh0" secondAttribute="centerX" id="KhV-ug-B8T"/>
                             <constraint firstItem="YHy-yw-Eh0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LvE-gO-K2N"/>
+                            <constraint firstItem="YHy-yw-Eh0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="OGU-Qc-VXN"/>
+                            <constraint firstItem="xkx-kj-4KA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PEt-7Z-m9d"/>
+                            <constraint firstItem="Lmj-TR-50M" firstAttribute="top" secondItem="Dgf-sv-GHk" secondAttribute="bottom" constant="10" id="Sji-EH-JBw"/>
+                            <constraint firstItem="xkx-kj-4KA" firstAttribute="top" secondItem="Lmj-TR-50M" secondAttribute="bottom" constant="10" id="iFj-tX-JM3"/>
+                            <constraint firstItem="Lmj-TR-50M" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="in7-ee-4Qb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="serverLabel" destination="Dgf-sv-GHk" id="QLf-ib-5jv"/>
+                        <outlet property="greetingLabel" destination="Lmj-TR-50M" id="VwV-FP-hiU"/>
+                        <outlet property="languagesSwitch" destination="tjG-zb-mWN" id="HVM-Pt-S6a"/>
+                        <outlet property="serverLabel" destination="Dgf-sv-GHk" id="OkL-Tc-x9r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

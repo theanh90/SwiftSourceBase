@@ -43,7 +43,8 @@ class Logger {
     
     // MARK: - Private method
     private static func showLog(type: LoggerType, content: String, file: String, line: Int, function: String) {
-        let fileName = file.components(separatedBy: "/").last ?? " "
-        print(String.init(format: "%@ - %@[%@:%d] - %@", type.logTitle(), fileName, function, line, content))
+        let fileName = file.components(separatedBy: "/").last ?? ""
+        let functionName = function.components(separatedBy: "(").first ?? ""
+        print(String.init(format: "%@ - %@[%@:%d] - %@", type.logTitle(), fileName, functionName, line, content))
     }
 }

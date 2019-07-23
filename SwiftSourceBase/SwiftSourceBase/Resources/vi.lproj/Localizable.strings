@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  SwiftSourceBase
+
+  Created by btanh on 7/24/19.
+  Copyright © 2019 Anh Bui. All rights reserved.
+*/
+"hello" = "Xin chào";
+"greeting" = "Chào mừng đến với \"Swift base template source code\"";
