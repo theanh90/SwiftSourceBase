@@ -7,21 +7,36 @@
 		<key>DevSwiftSourceBase.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 		<key>StgSwiftSourceBase.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<key>SwiftSourceBase.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>6CE3038622E46E5900C3E77A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6CE3039A22E46E5A00C3E77A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6CE303A522E46E5A00C3E77A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>959E02F122E6F91500FF53CE</key>
 		<dict>
 			<key>primary</key>
