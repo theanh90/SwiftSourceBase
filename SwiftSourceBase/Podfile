@@ -6,7 +6,8 @@ def shared_pods
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
   pod 'Alamofire'
-  pod 'Localize', '~> 2.3.0'
+  pod 'Localize', '~> 2.3.0'  
+  pod 'NVActivityIndicatorView'
 end
 
 target 'SwiftSourceBase' do

@@ -15,9 +15,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var serverLabel: UILabel!
     @IBOutlet weak var greetingLabel: UILabel!
     @IBOutlet weak var languagesSwitch: UISwitch!
+    @IBOutlet weak var getButton: UIButton!
+    @IBOutlet weak var postButton: UIButton!
     
     // MARK: - Private variable
     let bag = DisposeBag()
+    let viewModel = UserViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +36,7 @@ class ViewController: UIViewController {
         setupRx()
     }
 
+    // MARK: - Private method
     private func displayServer() {
         #if DEV
             serverLabel.text = "This is DEV server"
@@ -51,6 +55,35 @@ class ViewController: UIViewController {
                 self.localizeToggle(isVietnamese: isOn)
             })
             .disposed(by: bag)
+        
+        // Call API
+        getButton.rx.controlEvent(.touchUpInside)
+            .subscribe(onNext: { [weak self] (_) in
+                self?.viewModel.getUserInfo()
+            })
+            .disposed(by: bag)
+        
+        postButton.rx.controlEvent(.touchUpInside)
+            .subscribe(onNext: { [weak self] (_) in
+                self?.viewModel.addNewUser()
+            })
+            .disposed(by: bag)
+        
+        // Receive data
+        viewModel.errorString.subscribe(onNext: { (error) in
+            Logger.error(error)
+        })
+        .disposed(by: bag)
+        
+        viewModel.userInfo.subscribe(onNext: { (user) in
+            Logger.info("---xxx Ok roi: \(user)")
+        })
+        .disposed(by: bag)
+        
+        viewModel.newUser.subscribe(onNext: { (newUser) in
+            Logger.info("---xxx Add successfully roi: \(newUser)")
+        })
+        .disposed(by: bag)
     }
     
     private func localizeToggle(isVietnamese: Bool) {
@@ -60,6 +93,5 @@ class ViewController: UIViewController {
             Localize.update(language: "en")
         }
     }
-
 }
 
