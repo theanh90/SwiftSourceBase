@@ -59,28 +59,33 @@ class ViewController: UIViewController {
         // Call API
         getButton.rx.controlEvent(.touchUpInside)
             .subscribe(onNext: { [weak self] (_) in
+                WindowPopup.showLoading()
                 self?.viewModel.getUserInfo()
             })
             .disposed(by: bag)
         
         postButton.rx.controlEvent(.touchUpInside)
             .subscribe(onNext: { [weak self] (_) in
+                WindowPopup.showLoading()
                 self?.viewModel.addNewUser()
             })
             .disposed(by: bag)
         
         // Receive data
         viewModel.errorString.subscribe(onNext: { (error) in
+            WindowPopup.hideLoading()
             Logger.error(error)
         })
         .disposed(by: bag)
         
         viewModel.userInfo.subscribe(onNext: { (user) in
+            WindowPopup.hideLoading()
             Logger.info("---xxx Ok roi: \(user)")
         })
         .disposed(by: bag)
         
         viewModel.newUser.subscribe(onNext: { (newUser) in
+            WindowPopup.hideLoading()
             Logger.info("---xxx Add successfully roi: \(newUser)")
         })
         .disposed(by: bag)
