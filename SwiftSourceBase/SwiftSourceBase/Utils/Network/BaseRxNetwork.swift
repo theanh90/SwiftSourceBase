@@ -11,7 +11,11 @@ import Alamofire
 import RxSwift
 import RxCocoa
 
-class BaseRxNetwork {
+protocol BaseRxNetwork {
+    static func callAPIWithObject<T: Codable>(request: RequestApi, header: HTTPHeaders?) -> Observable<T>
+}
+
+extension BaseRxNetwork {
     static func callAPIWithObject<T: Codable>(request: RequestApi, header: HTTPHeaders? = nil) -> Observable<T> {
         return Observable.create({ (observer) -> Disposable in
             NetworkUtils<T>.requestAPI(request: request, header: header, successClosure: { (response) in

@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var languagesSwitch: UISwitch!
     @IBOutlet weak var getButton: UIButton!
     @IBOutlet weak var postButton: UIButton!
+    @IBOutlet weak var userListButton: UIButton!
     
     // MARK: - Private variable
     let bag = DisposeBag()
@@ -89,6 +90,13 @@ class ViewController: UIViewController {
             Logger.info("---xxx Add successfully roi: \(newUser)")
         })
         .disposed(by: bag)
+        
+        userListButton.rx.controlEvent(.touchUpInside)
+            .subscribe(onNext: {[weak self] (_) in
+                let attribute = ListUserVC.instantiate(name: StoryboardName.UserStoryboard.rawValue)
+                self?.navigationController?.pushViewController(attribute, animated: true)
+            })
+            .disposed(by: bag)
     }
     
     private func localizeToggle(isVietnamese: Bool) {

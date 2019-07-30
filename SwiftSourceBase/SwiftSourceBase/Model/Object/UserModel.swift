@@ -14,4 +14,6 @@ struct UserModel: Codable {
     let first_name: String?
     let last_name: String?
     let avatar: String?
+    let name: String?
+    let website: String?
 }

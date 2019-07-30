@@ -16,6 +16,7 @@ struct UserViewModel {
     private(set) var userInfo = PublishRelay<UserModel?>()
     private(set) var newUser = PublishRelay<CreateUserRes?>()
     private(set) var errorString = PublishRelay<String>()
+    private(set) var listUser = PublishRelay<[UserModel]?>()
     
     func getUserInfo() {
         UserService.getUserInfo()
@@ -37,6 +38,16 @@ struct UserViewModel {
         UserService.addNewUser()
             .subscribe(onNext: { (response) in
                 self.newUser.accept(response)
+            }, onError: { (error) in
+                self.errorString.accept(error.localizedDescription)
+            })
+            .disposed(by: bag)
+    }
+    
+    func getListUser(page: Int, size: Int) {
+        UserService.getListUser(page: page, size: size)
+            .subscribe(onNext: { (users) in
+                self.listUser.accept(users)
             }, onError: { (error) in
                 self.errorString.accept(error.localizedDescription)
             })

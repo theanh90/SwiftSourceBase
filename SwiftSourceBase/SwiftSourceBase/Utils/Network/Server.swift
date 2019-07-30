@@ -13,4 +13,5 @@ struct Server {
     
     static let apiGetUser = baseUrl + "/api/users/2"
     static let apiAddUser = baseUrl + "/api/users"
+    static let apiListUser = "http://www.somaku.com/users"
 }

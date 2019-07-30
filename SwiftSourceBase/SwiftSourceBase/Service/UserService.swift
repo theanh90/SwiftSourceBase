@@ -23,4 +23,11 @@ class UserService: BaseRxNetwork {
         
         return self.callAPIWithObject(request: request)
     }
+    
+    static func getListUser(page: Int, size: Int) -> Observable<[UserModel]> {
+        #warning("Need add page and size here")
+        let request = GetRequest(url: Server.apiListUser)
+        
+        return self.callAPIWithObject(request: request)
+    }
 }
