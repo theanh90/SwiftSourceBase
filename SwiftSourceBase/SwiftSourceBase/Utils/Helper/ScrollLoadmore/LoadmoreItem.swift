@@ -8,11 +8,11 @@
 
 import UIKit
 
-let PAGING_SIZE = 10
+let pageSize = 10
 
 struct LoadmoreItem {
     var page = 0
-    var size = PAGING_SIZE
+    var size = pageSize
     var hasLoadmore = false
     
     mutating func reset() {

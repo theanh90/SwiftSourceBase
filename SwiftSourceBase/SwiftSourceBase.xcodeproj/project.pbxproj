@@ -515,6 +515,7 @@
 				6CE3038422E46E5900C3E77A /* Frameworks */,
 				6CE3038522E46E5900C3E77A /* Resources */,
 				123E7BCB9F30C354274C0C08 /* [CP] Embed Pods Frameworks */,
+				6CBE963A22F5D5A200BD362A /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -570,6 +571,7 @@
 				959E02F622E6F91500FF53CE /* Frameworks */,
 				959E02F822E6F91500FF53CE /* Resources */,
 				959E02FC22E6F91500FF53CE /* [CP] Embed Pods Frameworks */,
+				6C7126F822F48C6D00ED98B4 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -589,6 +591,7 @@
 				959E030722E6FC3C00FF53CE /* Frameworks */,
 				959E030922E6FC3C00FF53CE /* Resources */,
 				959E030D22E6FC3C00FF53CE /* [CP] Embed Pods Frameworks */,
+				6CBE963922F5D59400BD362A /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -720,6 +723,60 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftSourceBase/Pods-SwiftSourceBase-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		6C7126F822F48C6D00ED98B4 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		6CBE963922F5D59400BD362A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		6CBE963A22F5D5A200BD362A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		959E02F222E6F91500FF53CE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

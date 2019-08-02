@@ -12,15 +12,11 @@ import UIKit
 // MARK: - Declare variable
 extension UIScrollView {
     fileprivate var loadmoreSize: CGFloat {
-        get {
-            return 100
-        }
+        return 100
     }
     
     fileprivate var distanceTrigger: CGFloat {
-        get {
-            return 100
-        }
+        return 100
     }
     
     fileprivate struct LoadmoreProperties {
@@ -33,15 +29,11 @@ extension UIScrollView {
     
     // for collectionview horizontal
     fileprivate var loadmoreSizeHorizontal: CGFloat {
-        get {
-            return 70
-        }
+        return 70
     }
     
     fileprivate var distanceTriggerHorizontal: CGFloat {
-        get {
-            return 75
-        }
+        return 75
     }
     
     // Refresh
@@ -196,7 +188,11 @@ extension UIScrollView {
         
         // loadmore view
         let tableSize = self.frame.size
-        let loadmoreView = UIActivityIndicatorView(frame: CGRect(x: 0, y: (self.tableFooterView?.frame.size.height)!, width: tableSize.width, height: loadmoreSize))
+        let frame = CGRect(x: 0,
+                           y: (self.tableFooterView?.frame.size.height)!,
+                           width: tableSize.width,
+                           height: loadmoreSize)
+        let loadmoreView = UIActivityIndicatorView(frame: frame)
         loadmoreView.style = .gray
         loadmoreView.startAnimating()
         loadmoreView.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
@@ -214,8 +210,6 @@ extension UIScrollView {
     
     // MARK: - Collection View
     fileprivate func loadmoreUICollectionViewWithAction(isHorizontal: Bool, action: () -> Void) {
-        guard let _ = self as? UICollectionView else { return }
-        
         if isHorizontal {
             loadmoreCollectionViewScrollHorizontal(action: action)
         } else {

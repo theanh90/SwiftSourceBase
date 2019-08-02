@@ -8,6 +8,7 @@ def shared_pods
   pod 'Alamofire'
   pod 'Localize', '~> 2.3.0'  
   pod 'NVActivityIndicatorView'
+  pod 'SwiftLint'
 end
 
 target 'SwiftSourceBase' do

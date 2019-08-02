@@ -16,9 +16,9 @@ typealias MultipartAlamofireImageUpload = (data: Data, name: String, fileName: S
 
 struct NetworkUtils<T: Codable> {    
     static func requestAPI(request: RequestApi,
-                                  header: HTTPHeaders? = nil,
-                                  successClosure: @escaping ((T) -> Void),
-                                  failClosure: @escaping APIFail) {
+                           header: HTTPHeaders? = nil,
+                           successClosure: @escaping ((T) -> Void),
+                           failClosure: @escaping APIFail) {
         // Header
         let requestHeader = self.getFullHeader(header: header)
         
@@ -48,7 +48,7 @@ struct NetworkUtils<T: Codable> {
                             failClosure(error)
                         }
                     } else {
-                        let error = NSError(domain:"No data was returned", code: -1, userInfo: nil)
+                        let error = NSError(domain: "No data was returned", code: -1, userInfo: nil)
                         Logger.error("API FAIL: No data was returned")
                         failClosure(error)
                     }
@@ -109,7 +109,7 @@ struct NetworkUtils<T: Codable> {
                             failClosure(error)
                         }
                     } else {
-                        let error = NSError(domain:"No data was returned", code: -1, userInfo: nil)
+                        let error = NSError(domain: "No data was returned", code: -1, userInfo: nil)
                         Logger.error("API FAIL: No data was returned")
                         failClosure(error)
                     }

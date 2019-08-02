@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var getButton: UIButton!
     @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var userListButton: UIButton!
-    
+
     // MARK: - Private variable
     let bag = DisposeBag()
     let viewModel = UserViewModel()
@@ -47,16 +47,16 @@ class ViewController: UIViewController {
             serverLabel.text = "This is PRODUCTION server"
         #endif
     }
-    
+
     private func setupRx() {
         languagesSwitch.rx.isOn.changed
             .subscribe(onNext: { [weak self] (isOn) in
                 guard let `self` = self else { return }
-                
+
                 self.localizeToggle(isVietnamese: isOn)
             })
             .disposed(by: bag)
-        
+
         // Call API
         getButton.rx.controlEvent(.touchUpInside)
             .subscribe(onNext: { [weak self] (_) in
@@ -64,36 +64,36 @@ class ViewController: UIViewController {
                 self?.viewModel.getUserInfo()
             })
             .disposed(by: bag)
-        
+
         postButton.rx.controlEvent(.touchUpInside)
             .subscribe(onNext: { [weak self] (_) in
                 WindowPopup.showLoading()
                 self?.viewModel.addNewUser()
             })
             .disposed(by: bag)
-        
+
         // Receive data
         viewModel.errorString.subscribe(onNext: { (error) in
             WindowPopup.hideLoading()
             Logger.error(error)
         })
         .disposed(by: bag)
-        
+
         viewModel.userInfo.subscribe(onNext: { (user) in
             WindowPopup.hideLoading()
             Logger.info("---xxx Ok roi: \(user)")
         })
         .disposed(by: bag)
-        
+
         viewModel.newUser.subscribe(onNext: { (newUser) in
             WindowPopup.hideLoading()
             Logger.info("---xxx Add successfully roi: \(newUser)")
         })
         .disposed(by: bag)
-        
+
         userListButton.rx.controlEvent(.touchUpInside)
             .subscribe(onNext: {[weak self] (_) in
-                let attribute = ListUserVC.instantiate(name: StoryboardName.UserStoryboard.rawValue)
+                let attribute = ListUserVC.instantiate(name: StoryboardName.userStoryboard.rawValue)
                 self?.navigationController?.pushViewController(attribute, animated: true)
             })
             .disposed(by: bag)
@@ -107,4 +107,3 @@ class ViewController: UIViewController {
         }
     }
 }
-

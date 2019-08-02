@@ -107,7 +107,7 @@ extension ListUserVC: UITableViewDelegate, UITableViewDataSource {
     
     // Load more
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        scrollView.loadmoreWithAction() {[weak self] in
+        scrollView.loadmoreWithAction {[weak self] in
             guard let `self` = self else { return }
             
             if self.loadmore.hasLoadmore {

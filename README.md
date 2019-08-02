@@ -13,4 +13,5 @@ Template include:
 + Logger with log type icon
 + Alamofire intergrate with Rxswift
 + UIScrollView loadmore extension
++ SwiftLint
 

@@ -9,8 +9,8 @@
 import UIKit
 
 enum StoryboardName: String {
-    case Main
-    case UserStoryboard
+    case main = "Main"
+    case userStoryboard = "UserStoryboard"
 }
 
 protocol Storyboarded { }
