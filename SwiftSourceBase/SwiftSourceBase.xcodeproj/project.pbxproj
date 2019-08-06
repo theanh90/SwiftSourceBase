@@ -1171,6 +1171,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "-D PROD $(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bta.SwiftSourceBase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1192,6 +1193,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "-D PROD $(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bta.SwiftSourceBase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1292,7 +1294,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D DEV";
+				OTHER_SWIFT_FLAGS = "-D DEV $(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bta.SwiftSourceBase.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1315,7 +1317,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D DEV";
+				OTHER_SWIFT_FLAGS = "-D DEV $(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bta.SwiftSourceBase.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1337,7 +1339,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D STG";
+				OTHER_SWIFT_FLAGS = "-D STG $(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bta.SwiftSourceBase.stg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1359,7 +1361,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D STG";
+				OTHER_SWIFT_FLAGS = "-D STG $(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bta.SwiftSourceBase.stg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

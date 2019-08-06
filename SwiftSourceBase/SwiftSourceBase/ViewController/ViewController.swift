@@ -43,7 +43,7 @@ class ViewController: UIViewController {
             serverLabel.text = "This is DEV server"
         #elseif STG
             serverLabel.text = "This is STAGING server"
-        #else
+        #else // PROD
             serverLabel.text = "This is PRODUCTION server"
         #endif
     }
