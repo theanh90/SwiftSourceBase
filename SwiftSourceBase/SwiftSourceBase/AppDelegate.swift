@@ -8,6 +8,7 @@
 
 import UIKit
 import Localize
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,10 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        // Test logging
         Logger.info("Finish launch at AppDelegate")
         Logger.warning("Finish launch at AppDelegate")
         Logger.error("Finish launch at AppDelegate")
+        
+        // Support multiple languages
         localizeConfig()
+        
+        // Enable IQKeyboardManager
+        IQKeyboardManager.shared.enable = true
         
         return true
     }

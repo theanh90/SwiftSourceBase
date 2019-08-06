@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (4.8.2)
+  - IQKeyboardManagerSwift (6.4.1)
+  - Kingfisher (4.10.1)
   - Localize (2.3.0)
   - NVActivityIndicatorView (4.7.0):
     - NVActivityIndicatorView/Presenter (= 4.7.0)
@@ -14,6 +16,8 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - IQKeyboardManagerSwift
+  - Kingfisher
   - Localize (~> 2.3.0)
   - NVActivityIndicatorView
   - RxCocoa (~> 5)
@@ -23,6 +27,8 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - IQKeyboardManagerSwift
+    - Kingfisher
     - Localize
     - NVActivityIndicatorView
     - RxCocoa
@@ -32,6 +38,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  IQKeyboardManagerSwift: d2df660d0b8d64a15cb2537c9ff303213fa515b2
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   Localize: cb1ae53ed73decaad0dce217806ed983091913f5
   NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
@@ -39,6 +47,6 @@ SPEC CHECKSUMS:
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   SwiftLint: 79d48a17c6565dc286c37efb8322c7b450f95c67
 
-PODFILE CHECKSUM: 77db89589829e98d907a3729fc427d52f62a8f61
+PODFILE CHECKSUM: 3534934703b83d688fc73732bb17ad99eeca2dbd
 
 COCOAPODS: 1.7.5

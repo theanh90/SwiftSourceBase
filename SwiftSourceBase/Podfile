@@ -9,6 +9,8 @@ def shared_pods
   pod 'Localize', '~> 2.3.0'  
   pod 'NVActivityIndicatorView'
   pod 'SwiftLint'
+  pod 'Kingfisher'
+  pod 'IQKeyboardManagerSwift'
 end
 
 target 'SwiftSourceBase' do

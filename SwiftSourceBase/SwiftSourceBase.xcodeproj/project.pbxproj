@@ -85,6 +85,18 @@
 		9544AA4622E85FE80062270E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9544AA4A22E85FE80062270E /* Localizable.strings */; };
 		9544AA4722E85FE80062270E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9544AA4A22E85FE80062270E /* Localizable.strings */; };
 		9544AA4822E85FE80062270E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9544AA4A22E85FE80062270E /* Localizable.strings */; };
+		95488CF822F937C4006AF9E0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95488CF722F937C4006AF9E0 /* UIView+Extension.swift */; };
+		95488CF922F937C4006AF9E0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95488CF722F937C4006AF9E0 /* UIView+Extension.swift */; };
+		95488CFA22F937C4006AF9E0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95488CF722F937C4006AF9E0 /* UIView+Extension.swift */; };
+		95488CFC22F93CBD006AF9E0 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95488CFB22F93CBD006AF9E0 /* UIDevice+Extension.swift */; };
+		95488CFD22F93CBD006AF9E0 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95488CFB22F93CBD006AF9E0 /* UIDevice+Extension.swift */; };
+		95488CFE22F93CBD006AF9E0 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95488CFB22F93CBD006AF9E0 /* UIDevice+Extension.swift */; };
+		95488D0022F93E3B006AF9E0 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95488CFF22F93E3B006AF9E0 /* UIImageView+Extension.swift */; };
+		95488D0122F93E3B006AF9E0 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95488CFF22F93E3B006AF9E0 /* UIImageView+Extension.swift */; };
+		95488D0222F93E3B006AF9E0 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95488CFF22F93E3B006AF9E0 /* UIImageView+Extension.swift */; };
+		95488D0422F93EF0006AF9E0 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95488D0322F93EF0006AF9E0 /* UIButton+Extension.swift */; };
+		95488D0522F93EF0006AF9E0 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95488D0322F93EF0006AF9E0 /* UIButton+Extension.swift */; };
+		95488D0622F93EF0006AF9E0 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95488D0322F93EF0006AF9E0 /* UIButton+Extension.swift */; };
 		959E02F422E6F91500FF53CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE3038C22E46E5900C3E77A /* ViewController.swift */; };
 		959E02F522E6F91500FF53CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE3038A22E46E5900C3E77A /* AppDelegate.swift */; };
 		959E02F922E6F91500FF53CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CE3039322E46E5A00C3E77A /* LaunchScreen.storyboard */; };
@@ -173,6 +185,10 @@
 		6CE303AC22E46E5A00C3E77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9544AA4922E85FE80062270E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9544AA4B22E860020062270E /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		95488CF722F937C4006AF9E0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		95488CFB22F93CBD006AF9E0 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		95488CFF22F93E3B006AF9E0 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		95488D0322F93EF0006AF9E0 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		959E030022E6F91500FF53CE /* DevSwiftSourceBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevSwiftSourceBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959E031122E6FC3C00FF53CE /* StgSwiftSourceBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StgSwiftSourceBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959E031322E706AB00FF53CE /* Dev-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Dev-Info.plist"; sourceTree = "<group>"; };
@@ -286,6 +302,10 @@
 			children = (
 				6C4BA76122EB385900F3D792 /* UIColor+Extension.swift */,
 				6C4BA76522EB391600F3D792 /* String+Extension.swift */,
+				95488CFB22F93CBD006AF9E0 /* UIDevice+Extension.swift */,
+				95488CF722F937C4006AF9E0 /* UIView+Extension.swift */,
+				95488D0322F93EF0006AF9E0 /* UIButton+Extension.swift */,
+				95488CFF22F93E3B006AF9E0 /* UIImageView+Extension.swift */,
 				95EB7DCB22EFFC48005D4181 /* Codable+Extension.swift */,
 			);
 			path = Extension;
@@ -886,6 +906,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95EB7DCE22EFFC48005D4181 /* Codable+Extension.swift in Sources */,
+				95488CFE22F93CBD006AF9E0 /* UIDevice+Extension.swift in Sources */,
 				95EB7DD322F003D4005D4181 /* StoryboardName.swift in Sources */,
 				6C4BA77F22EB4A9000F3D792 /* Server.swift in Sources */,
 				6C505EC022ED69B90005473C /* WindowPopup.swift in Sources */,
@@ -897,6 +918,8 @@
 				6C505ED222EDA1430005473C /* ListUserVC.swift in Sources */,
 				6C374CD422EC7E48006D3068 /* UserService.swift in Sources */,
 				6C3A10A322F31BD6000EBC4B /* UserCell.swift in Sources */,
+				95488CFA22F937C4006AF9E0 /* UIView+Extension.swift in Sources */,
+				95488D0222F93E3B006AF9E0 /* UIImageView+Extension.swift in Sources */,
 				6C374CD922EC80AA006D3068 /* UserViewModel.swift in Sources */,
 				6C505EC622ED6DBE0005473C /* LoadingVC.swift in Sources */,
 				6C4BA76D22EB398300F3D792 /* CommonEnum.swift in Sources */,
@@ -905,6 +928,7 @@
 				6C374CCB22EC4406006D3068 /* Request.swift in Sources */,
 				6C4BA79322EB58A000F3D792 /* CreateUserReq.swift in Sources */,
 				959E031F22E70B6400FF53CE /* Logger.swift in Sources */,
+				95488D0622F93EF0006AF9E0 /* UIButton+Extension.swift in Sources */,
 				6C4BA77A22EB3E3000F3D792 /* CustomError.swift in Sources */,
 				6C4BA76822EB391600F3D792 /* String+Extension.swift in Sources */,
 				6CE3038B22E46E5900C3E77A /* AppDelegate.swift in Sources */,
@@ -935,6 +959,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95EB7DCC22EFFC48005D4181 /* Codable+Extension.swift in Sources */,
+				95488CFC22F93CBD006AF9E0 /* UIDevice+Extension.swift in Sources */,
 				95EB7DD122F003D4005D4181 /* StoryboardName.swift in Sources */,
 				6C4BA77D22EB4A9000F3D792 /* Server.swift in Sources */,
 				6C505EBE22ED69B90005473C /* WindowPopup.swift in Sources */,
@@ -946,6 +971,8 @@
 				6C505ED022EDA1430005473C /* ListUserVC.swift in Sources */,
 				6C374CD222EC7E48006D3068 /* UserService.swift in Sources */,
 				6C3A10A122F31BD6000EBC4B /* UserCell.swift in Sources */,
+				95488CF822F937C4006AF9E0 /* UIView+Extension.swift in Sources */,
+				95488D0022F93E3B006AF9E0 /* UIImageView+Extension.swift in Sources */,
 				6C374CD722EC80AA006D3068 /* UserViewModel.swift in Sources */,
 				6C505EC422ED6DBE0005473C /* LoadingVC.swift in Sources */,
 				6C4BA76B22EB398300F3D792 /* CommonEnum.swift in Sources */,
@@ -954,6 +981,7 @@
 				6C374CC922EC4406006D3068 /* Request.swift in Sources */,
 				6C4BA79122EB58A000F3D792 /* CreateUserReq.swift in Sources */,
 				959E031D22E70B6400FF53CE /* Logger.swift in Sources */,
+				95488D0422F93EF0006AF9E0 /* UIButton+Extension.swift in Sources */,
 				6C4BA77822EB3E3000F3D792 /* CustomError.swift in Sources */,
 				6C4BA76622EB391600F3D792 /* String+Extension.swift in Sources */,
 				959E02F522E6F91500FF53CE /* AppDelegate.swift in Sources */,
@@ -968,6 +996,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95EB7DCD22EFFC48005D4181 /* Codable+Extension.swift in Sources */,
+				95488CFD22F93CBD006AF9E0 /* UIDevice+Extension.swift in Sources */,
 				95EB7DD222F003D4005D4181 /* StoryboardName.swift in Sources */,
 				6C4BA77E22EB4A9000F3D792 /* Server.swift in Sources */,
 				6C505EBF22ED69B90005473C /* WindowPopup.swift in Sources */,
@@ -979,6 +1008,8 @@
 				6C505ED122EDA1430005473C /* ListUserVC.swift in Sources */,
 				6C374CD322EC7E48006D3068 /* UserService.swift in Sources */,
 				6C3A10A222F31BD6000EBC4B /* UserCell.swift in Sources */,
+				95488CF922F937C4006AF9E0 /* UIView+Extension.swift in Sources */,
+				95488D0122F93E3B006AF9E0 /* UIImageView+Extension.swift in Sources */,
 				6C374CD822EC80AA006D3068 /* UserViewModel.swift in Sources */,
 				6C505EC522ED6DBE0005473C /* LoadingVC.swift in Sources */,
 				6C4BA76C22EB398300F3D792 /* CommonEnum.swift in Sources */,
@@ -987,6 +1018,7 @@
 				6C374CCA22EC4406006D3068 /* Request.swift in Sources */,
 				6C4BA79222EB58A000F3D792 /* CreateUserReq.swift in Sources */,
 				959E031E22E70B6400FF53CE /* Logger.swift in Sources */,
+				95488D0522F93EF0006AF9E0 /* UIButton+Extension.swift in Sources */,
 				6C4BA77922EB3E3000F3D792 /* CustomError.swift in Sources */,
 				6C4BA76722EB391600F3D792 /* String+Extension.swift in Sources */,
 				959E030622E6FC3C00FF53CE /* AppDelegate.swift in Sources */,
@@ -1092,7 +1124,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1148,7 +1180,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

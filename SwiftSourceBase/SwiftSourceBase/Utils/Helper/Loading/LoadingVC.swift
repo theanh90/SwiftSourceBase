@@ -16,12 +16,12 @@ class LoadingVC: UIViewController {
     // MARK: - Private variable
     private lazy var activity: NVActivityIndicatorView = {
         let active = NVActivityIndicatorView(frame: .zero,
-                                       type: .ballScaleRippleMultiple,
-                                       color: UIColor.hexString("404040"),
-                                       padding: 13)
+                                       type: .ballClipRotate,
+                                       color: UIColor.hexString("#E94E5D"),
+                                       padding: 15)
         
         active.backgroundColor = .white
-        active.layer.cornerRadius = 15
+        active.layer.cornerRadius = 18
         active.layer.masksToBounds = true
         
         return active
