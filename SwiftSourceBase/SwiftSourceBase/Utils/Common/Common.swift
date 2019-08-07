@@ -17,3 +17,5 @@ extension Identified {
         return "\(self)"
     }
 }
+
+typealias EmptyClosure = () -> Void

@@ -30,4 +30,11 @@ class UserService: BaseRxNetwork {
         
         return self.callAPIWithObject(request: request)
     }
+    
+    static func login(_ param: LoginReq) -> Observable<LoginData> {
+        var request = PostRequest(url: Server.apiLogin)
+        request.requestParam = param.asDictionary()
+        
+        return self.callAPIWithObject(request: request)
+    }
 }

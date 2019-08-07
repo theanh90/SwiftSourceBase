@@ -99,6 +99,18 @@
                                 </constraints>
                                 <state key="normal" title="User List"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwd-W9-dOn">
+                                <rect key="frame" x="152.5" y="435" width="70" height="55"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.1764705882" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="L2t-WI-ulB"/>
+                                    <constraint firstAttribute="width" secondItem="pwd-W9-dOn" secondAttribute="height" multiplier="19:15" id="yvS-jg-GWa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.30741450393634984" green="0.66666668653488159" blue="0.62812916183286138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -115,7 +127,9 @@
                             <constraint firstItem="pYS-fi-fCS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="WTw-JW-Bbs"/>
                             <constraint firstItem="xkx-kj-4KA" firstAttribute="top" secondItem="Lmj-TR-50M" secondAttribute="bottom" constant="10" id="iFj-tX-JM3"/>
                             <constraint firstItem="Lmj-TR-50M" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="in7-ee-4Qb"/>
+                            <constraint firstItem="pwd-W9-dOn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mSb-FL-9EX"/>
                             <constraint firstItem="jnU-uE-ru3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="md7-9y-84q"/>
+                            <constraint firstItem="pwd-W9-dOn" firstAttribute="top" secondItem="jnU-uE-ru3" secondAttribute="bottom" constant="56.5" id="niY-gN-5Ji"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -124,6 +138,7 @@
                         <outlet property="getButton" destination="RTb-c6-AK5" id="37N-Le-zbL"/>
                         <outlet property="greetingLabel" destination="Lmj-TR-50M" id="VwV-FP-hiU"/>
                         <outlet property="languagesSwitch" destination="tjG-zb-mWN" id="HVM-Pt-S6a"/>
+                        <outlet property="loginButton" destination="pwd-W9-dOn" id="niv-Af-x3u"/>
                         <outlet property="postButton" destination="NKI-Ia-cMz" id="muX-H0-OTP"/>
                         <outlet property="serverLabel" destination="Dgf-sv-GHk" id="OkL-Tc-x9r"/>
                         <outlet property="userListButton" destination="jnU-uE-ru3" id="C2S-Eo-crp"/>

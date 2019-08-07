@@ -7,3 +7,5 @@
 */
 "hello" = "Xin chào";
 "greeting" = "Chào mừng đến với \"Swift base template source code\"";
+
+"alert_title" = "Thông báo";

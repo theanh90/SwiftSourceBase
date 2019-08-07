@@ -25,6 +25,23 @@ class WindowPopup {
 
 // MARK: - Loading view
 extension WindowPopup {
+    // Alert view
+    static func showAlert(_ content: String, title: String? = nil, yesBlock: EmptyClosure? = nil, noBlock: EmptyClosure? = nil) {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.windowLevel = UIWindow.Level.alert + 1
+        let alertVC = AlertVC()
+        alertVC.yesBlock = yesBlock
+        alertVC.noBlock = noBlock
+        alertVC.titleAlert = title
+        alertVC.contentAlert = content
+        
+        controller = alertVC
+        
+        window?.rootViewController = controller
+        window?.makeKeyAndVisible()
+    }
+    
+    // Loading view
     static func showLoading() {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowLevel = UIWindow.Level.alert + 1

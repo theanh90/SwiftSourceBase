@@ -18,7 +18,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var getButton: UIButton!
     @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var userListButton: UIButton!
-
+    @IBOutlet weak var loginButton: UIButton!
+    
     // MARK: - Private variable
     let bag = DisposeBag()
     let viewModel = UserViewModel()
@@ -71,6 +72,19 @@ class ViewController: UIViewController {
                 self?.viewModel.addNewUser()
             })
             .disposed(by: bag)
+        
+        userListButton.rx.controlEvent(.touchUpInside)
+            .subscribe(onNext: {[weak self] (_) in
+                let attribute = ListUserVC.instantiate(name: StoryboardName.userStoryboard.rawValue)
+                self?.navigationController?.pushViewController(attribute, animated: true)
+            })
+            .disposed(by: bag)
+        
+        loginButton.rx.controlEvent(.touchUpInside)
+            .subscribe(onNext: {[weak self] (_) in
+                self?.doLogin()
+            })
+            .disposed(by: bag)
 
         // Receive data
         viewModel.errorString.subscribe(onNext: { (error) in
@@ -90,13 +104,30 @@ class ViewController: UIViewController {
             Logger.info("---xxx Add successfully roi: \(newUser)")
         })
         .disposed(by: bag)
-
-        userListButton.rx.controlEvent(.touchUpInside)
-            .subscribe(onNext: {[weak self] (_) in
-                let attribute = ListUserVC.instantiate(name: StoryboardName.userStoryboard.rawValue)
-                self?.navigationController?.pushViewController(attribute, animated: true)
-            })
-            .disposed(by: bag)
+        
+        viewModel.loginData.subscribe(onNext: {[weak self] (data) in
+            WindowPopup.hideLoading()
+            self?.handleLoginSuccess(data: data)
+        })
+        .disposed(by: bag)
+    }
+    
+    private func handleLoginSuccess(data: LoginData) {
+        Logger.warning("login data: \(data)")
+        WindowPopup.showAlert("Login thành công rồi", title: "Chúc mừng", yesBlock: {
+            print("---xxx yes rồi")
+        }) {
+            print("---xxx no rồi")
+        }
+    }
+    
+    private func doLogin() {
+        var param = LoginReq()
+        param.email = "eve.holt@reqres.in"
+        param.password = "cityslicka"
+        
+        WindowPopup.showLoading()
+        viewModel.login(param)
     }
     
     private func localizeToggle(isVietnamese: Bool) {

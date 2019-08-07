@@ -82,6 +82,18 @@
 		6CE303A022E46E5A00C3E77A /* SwiftSourceBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE3039F22E46E5A00C3E77A /* SwiftSourceBaseTests.swift */; };
 		6CE303AB22E46E5A00C3E77A /* SwiftSourceBaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE303AA22E46E5A00C3E77A /* SwiftSourceBaseUITests.swift */; };
 		7B19CE64BE46D11D54D10494 /* Pods_DevSwiftSourceBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A3C5021DA5F530B439F0C4C /* Pods_DevSwiftSourceBase.framework */; };
+		950369B122FA762E0056CAEA /* LoginReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950369B022FA762E0056CAEA /* LoginReq.swift */; };
+		950369B222FA762E0056CAEA /* LoginReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950369B022FA762E0056CAEA /* LoginReq.swift */; };
+		950369B322FA762E0056CAEA /* LoginReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950369B022FA762E0056CAEA /* LoginReq.swift */; };
+		950369B522FA7D070056CAEA /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950369B422FA7D070056CAEA /* LoginData.swift */; };
+		950369B622FA7D070056CAEA /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950369B422FA7D070056CAEA /* LoginData.swift */; };
+		950369B722FA7D070056CAEA /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950369B422FA7D070056CAEA /* LoginData.swift */; };
+		950369BB22FA84F80056CAEA /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950369B922FA84F80056CAEA /* AlertVC.swift */; };
+		950369BC22FA84F80056CAEA /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950369B922FA84F80056CAEA /* AlertVC.swift */; };
+		950369BD22FA84F80056CAEA /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950369B922FA84F80056CAEA /* AlertVC.swift */; };
+		950369BE22FA84F80056CAEA /* AlertVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950369BA22FA84F80056CAEA /* AlertVC.xib */; };
+		950369BF22FA84F80056CAEA /* AlertVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950369BA22FA84F80056CAEA /* AlertVC.xib */; };
+		950369C022FA84F80056CAEA /* AlertVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950369BA22FA84F80056CAEA /* AlertVC.xib */; };
 		9544AA4622E85FE80062270E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9544AA4A22E85FE80062270E /* Localizable.strings */; };
 		9544AA4722E85FE80062270E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9544AA4A22E85FE80062270E /* Localizable.strings */; };
 		9544AA4822E85FE80062270E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9544AA4A22E85FE80062270E /* Localizable.strings */; };
@@ -183,6 +195,10 @@
 		6CE303A622E46E5A00C3E77A /* SwiftSourceBaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSourceBaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CE303AA22E46E5A00C3E77A /* SwiftSourceBaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSourceBaseUITests.swift; sourceTree = "<group>"; };
 		6CE303AC22E46E5A00C3E77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		950369B022FA762E0056CAEA /* LoginReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReq.swift; sourceTree = "<group>"; };
+		950369B422FA7D070056CAEA /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
+		950369B922FA84F80056CAEA /* AlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertVC.swift; sourceTree = "<group>"; };
+		950369BA22FA84F80056CAEA /* AlertVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertVC.xib; sourceTree = "<group>"; };
 		9544AA4922E85FE80062270E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9544AA4B22E860020062270E /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		95488CF722F937C4006AF9E0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -323,6 +339,7 @@
 		6C4BA76E22EB39CB00F3D792 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				950369B822FA84720056CAEA /* Alert */,
 				6C3A10A822F32BA9000EBC4B /* ScrollLoadmore */,
 				95EB7DCF22EFFCA0005D4181 /* StoryBoard */,
 				6C505EC122ED6D750005473C /* WindowPopup */,
@@ -368,6 +385,7 @@
 			children = (
 				6C4BA78B22EB564200F3D792 /* CreateUserRes.swift */,
 				6C4BA78722EB4DD200F3D792 /* BaseRes.swift */,
+				950369B422FA7D070056CAEA /* LoginData.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -376,6 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				6C4BA79022EB58A000F3D792 /* CreateUserReq.swift */,
+				950369B022FA762E0056CAEA /* LoginReq.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -466,6 +485,15 @@
 				07B01148B732273F108B44C4 /* Pods-StgSwiftSourceBase.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		950369B822FA84720056CAEA /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				950369B922FA84F80056CAEA /* AlertVC.swift */,
+				950369BA22FA84F80056CAEA /* AlertVC.xib */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		9544AA4122E85DD80062270E /* Resources */ = {
@@ -681,6 +709,7 @@
 				9544AA4822E85FE80062270E /* Localizable.strings in Resources */,
 				6CE3039222E46E5A00C3E77A /* Assets.xcassets in Resources */,
 				6CE3039022E46E5900C3E77A /* Main.storyboard in Resources */,
+				950369C022FA84F80056CAEA /* AlertVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,6 +737,7 @@
 				959E02F922E6F91500FF53CE /* LaunchScreen.storyboard in Resources */,
 				959E02FA22E6F91500FF53CE /* Assets.xcassets in Resources */,
 				959E02FB22E6F91500FF53CE /* Main.storyboard in Resources */,
+				950369BE22FA84F80056CAEA /* AlertVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,6 +751,7 @@
 				959E030A22E6FC3C00FF53CE /* LaunchScreen.storyboard in Resources */,
 				959E030B22E6FC3C00FF53CE /* Assets.xcassets in Resources */,
 				959E030C22E6FC3C00FF53CE /* Main.storyboard in Resources */,
+				950369BF22FA84F80056CAEA /* AlertVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -918,10 +949,12 @@
 				6C505ED222EDA1430005473C /* ListUserVC.swift in Sources */,
 				6C374CD422EC7E48006D3068 /* UserService.swift in Sources */,
 				6C3A10A322F31BD6000EBC4B /* UserCell.swift in Sources */,
+				950369B322FA762E0056CAEA /* LoginReq.swift in Sources */,
 				95488CFA22F937C4006AF9E0 /* UIView+Extension.swift in Sources */,
 				95488D0222F93E3B006AF9E0 /* UIImageView+Extension.swift in Sources */,
 				6C374CD922EC80AA006D3068 /* UserViewModel.swift in Sources */,
 				6C505EC622ED6DBE0005473C /* LoadingVC.swift in Sources */,
+				950369BD22FA84F80056CAEA /* AlertVC.swift in Sources */,
 				6C4BA76D22EB398300F3D792 /* CommonEnum.swift in Sources */,
 				6CE3038D22E46E5900C3E77A /* ViewController.swift in Sources */,
 				6C3A10A722F31C8B000EBC4B /* Common.swift in Sources */,
@@ -933,6 +966,7 @@
 				6C4BA76822EB391600F3D792 /* String+Extension.swift in Sources */,
 				6CE3038B22E46E5900C3E77A /* AppDelegate.swift in Sources */,
 				6C3A10AC22F32BD5000EBC4B /* ScrollView+Loadmore.swift in Sources */,
+				950369B722FA7D070056CAEA /* LoginData.swift in Sources */,
 				6C4BA78622EB4CC600F3D792 /* UserModel.swift in Sources */,
 				6C3A10B022F33077000EBC4B /* LoadmoreItem.swift in Sources */,
 			);
@@ -971,10 +1005,12 @@
 				6C505ED022EDA1430005473C /* ListUserVC.swift in Sources */,
 				6C374CD222EC7E48006D3068 /* UserService.swift in Sources */,
 				6C3A10A122F31BD6000EBC4B /* UserCell.swift in Sources */,
+				950369B122FA762E0056CAEA /* LoginReq.swift in Sources */,
 				95488CF822F937C4006AF9E0 /* UIView+Extension.swift in Sources */,
 				95488D0022F93E3B006AF9E0 /* UIImageView+Extension.swift in Sources */,
 				6C374CD722EC80AA006D3068 /* UserViewModel.swift in Sources */,
 				6C505EC422ED6DBE0005473C /* LoadingVC.swift in Sources */,
+				950369BB22FA84F80056CAEA /* AlertVC.swift in Sources */,
 				6C4BA76B22EB398300F3D792 /* CommonEnum.swift in Sources */,
 				959E02F422E6F91500FF53CE /* ViewController.swift in Sources */,
 				6C3A10A522F31C8B000EBC4B /* Common.swift in Sources */,
@@ -986,6 +1022,7 @@
 				6C4BA76622EB391600F3D792 /* String+Extension.swift in Sources */,
 				959E02F522E6F91500FF53CE /* AppDelegate.swift in Sources */,
 				6C3A10AA22F32BD5000EBC4B /* ScrollView+Loadmore.swift in Sources */,
+				950369B522FA7D070056CAEA /* LoginData.swift in Sources */,
 				6C4BA78422EB4CC600F3D792 /* UserModel.swift in Sources */,
 				6C3A10AE22F33077000EBC4B /* LoadmoreItem.swift in Sources */,
 			);
@@ -1008,10 +1045,12 @@
 				6C505ED122EDA1430005473C /* ListUserVC.swift in Sources */,
 				6C374CD322EC7E48006D3068 /* UserService.swift in Sources */,
 				6C3A10A222F31BD6000EBC4B /* UserCell.swift in Sources */,
+				950369B222FA762E0056CAEA /* LoginReq.swift in Sources */,
 				95488CF922F937C4006AF9E0 /* UIView+Extension.swift in Sources */,
 				95488D0122F93E3B006AF9E0 /* UIImageView+Extension.swift in Sources */,
 				6C374CD822EC80AA006D3068 /* UserViewModel.swift in Sources */,
 				6C505EC522ED6DBE0005473C /* LoadingVC.swift in Sources */,
+				950369BC22FA84F80056CAEA /* AlertVC.swift in Sources */,
 				6C4BA76C22EB398300F3D792 /* CommonEnum.swift in Sources */,
 				959E030522E6FC3C00FF53CE /* ViewController.swift in Sources */,
 				6C3A10A622F31C8B000EBC4B /* Common.swift in Sources */,
@@ -1023,6 +1062,7 @@
 				6C4BA76722EB391600F3D792 /* String+Extension.swift in Sources */,
 				959E030622E6FC3C00FF53CE /* AppDelegate.swift in Sources */,
 				6C3A10AB22F32BD5000EBC4B /* ScrollView+Loadmore.swift in Sources */,
+				950369B622FA7D070056CAEA /* LoginData.swift in Sources */,
 				6C4BA78522EB4CC600F3D792 /* UserModel.swift in Sources */,
 				6C3A10AF22F33077000EBC4B /* LoadmoreItem.swift in Sources */,
 			);
