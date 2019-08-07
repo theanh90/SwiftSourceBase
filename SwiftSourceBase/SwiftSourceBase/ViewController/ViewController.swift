@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Localize
+import GoogleSignIn
 
 class ViewController: UIViewController {
     @IBOutlet weak var serverLabel: UILabel!
@@ -19,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var userListButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var googleLoginButton: UIButton!
     
     // MARK: - Private variable
     let bag = DisposeBag()
@@ -36,6 +38,10 @@ class ViewController: UIViewController {
         
         // RxSwift
         setupRx()
+        
+        // Google sign in
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().delegate = self
     }
 
     // MARK: - Private method
@@ -83,6 +89,12 @@ class ViewController: UIViewController {
         loginButton.rx.controlEvent(.touchUpInside)
             .subscribe(onNext: {[weak self] (_) in
                 self?.doLogin()
+            })
+            .disposed(by: bag)
+        
+        googleLoginButton.rx.controlEvent(.touchUpInside)
+            .subscribe(onNext: {[weak self] (_) in
+                self?.signInWithGoogle()
             })
             .disposed(by: bag)
 
@@ -147,5 +159,31 @@ class ViewController: UIViewController {
         } else {
             Localize.update(language: "en")
         }
+    }
+}
+
+// MARK: - Google sign in
+extension ViewController: GIDSignInDelegate, GIDSignInUIDelegate {
+    func sign(_ signIn: GIDSignIn!,
+              didSignInFor user: GIDGoogleUser!,
+              withError error: Error!) {
+        if let error = error {
+            Logger.error("\(error.localizedDescription)")
+        } else {
+            // Perform any operations on signed in user here.
+            let userId = user.userID                  // For client-side use only!
+            let idToken = user.authentication.idToken // Safe to send to the server
+            let fullName = user.profile.name
+            let givenName = user.profile.givenName
+            let familyName = user.profile.familyName
+            let email = user.profile.email
+            // ...
+            Logger.info("ssssss")
+        }
+    }
+    
+    private func signInWithGoogle() {
+        GIDSignIn.sharedInstance().signOut()
+        GIDSignIn.sharedInstance()?.signIn()
     }
 }

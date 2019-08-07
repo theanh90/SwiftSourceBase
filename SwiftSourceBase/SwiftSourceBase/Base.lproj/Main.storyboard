@@ -91,23 +91,29 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnU-uE-ru3">
-                                <rect key="frame" x="147.5" y="339" width="80" height="39.5"/>
+                                <rect key="frame" x="157" y="339" width="61" height="30"/>
                                 <color key="backgroundColor" red="0.99380667099999997" green="0.45614549770000001" blue="0.37319267410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="5pW-vc-Xgw"/>
                                     <constraint firstAttribute="width" secondItem="jnU-uE-ru3" secondAttribute="height" multiplier="61:30" id="adc-xH-Mxg"/>
                                 </constraints>
                                 <state key="normal" title="User List"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwd-W9-dOn">
-                                <rect key="frame" x="152.5" y="435" width="70" height="55"/>
+                                <rect key="frame" x="167" y="379" width="41" height="32.5"/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.1764705882" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="L2t-WI-ulB"/>
                                     <constraint firstAttribute="width" secondItem="pwd-W9-dOn" secondAttribute="height" multiplier="19:15" id="yvS-jg-GWa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWA-fZ-MPA">
+                                <rect key="frame" x="122" y="421.5" width="131" height="30"/>
+                                <color key="backgroundColor" red="0.30588235289999999" green="0.58039215690000001" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Login with Google">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
@@ -116,6 +122,7 @@
                         <constraints>
                             <constraint firstItem="Dgf-sv-GHk" firstAttribute="top" secondItem="YHy-yw-Eh0" secondAttribute="bottom" constant="10" id="0ZH-uB-VWG"/>
                             <constraint firstItem="Lmj-TR-50M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="980-BY-7HO"/>
+                            <constraint firstItem="JWA-fZ-MPA" firstAttribute="top" secondItem="pwd-W9-dOn" secondAttribute="bottom" constant="10" id="EcF-cw-pfE"/>
                             <constraint firstItem="pYS-fi-fCS" firstAttribute="top" secondItem="xkx-kj-4KA" secondAttribute="bottom" constant="10" id="FkO-FF-kS9"/>
                             <constraint firstItem="Dgf-sv-GHk" firstAttribute="centerX" secondItem="YHy-yw-Eh0" secondAttribute="centerX" id="KhV-ug-B8T"/>
                             <constraint firstItem="YHy-yw-Eh0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LvE-gO-K2N"/>
@@ -129,13 +136,15 @@
                             <constraint firstItem="Lmj-TR-50M" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="in7-ee-4Qb"/>
                             <constraint firstItem="pwd-W9-dOn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mSb-FL-9EX"/>
                             <constraint firstItem="jnU-uE-ru3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="md7-9y-84q"/>
-                            <constraint firstItem="pwd-W9-dOn" firstAttribute="top" secondItem="jnU-uE-ru3" secondAttribute="bottom" constant="56.5" id="niY-gN-5Ji"/>
+                            <constraint firstItem="pwd-W9-dOn" firstAttribute="top" secondItem="jnU-uE-ru3" secondAttribute="bottom" constant="10" id="niY-gN-5Ji"/>
+                            <constraint firstItem="JWA-fZ-MPA" firstAttribute="centerX" secondItem="pwd-W9-dOn" secondAttribute="centerX" id="pU1-ZP-LwN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Xi1-2e-v4B"/>
                     <connections>
                         <outlet property="getButton" destination="RTb-c6-AK5" id="37N-Le-zbL"/>
+                        <outlet property="googleLoginButton" destination="JWA-fZ-MPA" id="Fer-Fe-i7g"/>
                         <outlet property="greetingLabel" destination="Lmj-TR-50M" id="VwV-FP-hiU"/>
                         <outlet property="languagesSwitch" destination="tjG-zb-mWN" id="HVM-Pt-S6a"/>
                         <outlet property="loginButton" destination="pwd-W9-dOn" id="niv-Af-x3u"/>

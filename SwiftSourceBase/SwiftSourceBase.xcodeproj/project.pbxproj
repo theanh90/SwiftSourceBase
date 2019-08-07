@@ -587,6 +587,7 @@
 				6CE3038522E46E5900C3E77A /* Resources */,
 				123E7BCB9F30C354274C0C08 /* [CP] Embed Pods Frameworks */,
 				6CBE963A22F5D5A200BD362A /* SwiftLint */,
+				2BB182673794BD6853FEAE1E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -643,6 +644,7 @@
 				959E02F822E6F91500FF53CE /* Resources */,
 				959E02FC22E6F91500FF53CE /* [CP] Embed Pods Frameworks */,
 				6C7126F822F48C6D00ED98B4 /* SwiftLint */,
+				7D17F26DFCBBE7C893E1BF8D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -663,6 +665,7 @@
 				959E030922E6FC3C00FF53CE /* Resources */,
 				959E030D22E6FC3C00FF53CE /* [CP] Embed Pods Frameworks */,
 				6CBE963922F5D59400BD362A /* SwiftLint */,
+				1EDC97099DF57C2369CFF508 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -798,6 +801,40 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftSourceBase/Pods-SwiftSourceBase-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		1EDC97099DF57C2369CFF508 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StgSwiftSourceBase/Pods-StgSwiftSourceBase-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StgSwiftSourceBase/Pods-StgSwiftSourceBase-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StgSwiftSourceBase/Pods-StgSwiftSourceBase-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2BB182673794BD6853FEAE1E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftSourceBase/Pods-SwiftSourceBase-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftSourceBase/Pods-SwiftSourceBase-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftSourceBase/Pods-SwiftSourceBase-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6C7126F822F48C6D00ED98B4 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -851,6 +888,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		7D17F26DFCBBE7C893E1BF8D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DevSwiftSourceBase/Pods-DevSwiftSourceBase-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DevSwiftSourceBase/Pods-DevSwiftSourceBase-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DevSwiftSourceBase/Pods-DevSwiftSourceBase-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		959E02F222E6F91500FF53CE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
