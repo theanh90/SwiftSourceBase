@@ -94,6 +94,15 @@
 		950369BE22FA84F80056CAEA /* AlertVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950369BA22FA84F80056CAEA /* AlertVC.xib */; };
 		950369BF22FA84F80056CAEA /* AlertVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950369BA22FA84F80056CAEA /* AlertVC.xib */; };
 		950369C022FA84F80056CAEA /* AlertVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950369BA22FA84F80056CAEA /* AlertVC.xib */; };
+		950369C322FAB7700056CAEA /* UserDefaultTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950369C222FAB7700056CAEA /* UserDefaultTools.swift */; };
+		950369C422FAB7700056CAEA /* UserDefaultTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950369C222FAB7700056CAEA /* UserDefaultTools.swift */; };
+		950369C522FAB7700056CAEA /* UserDefaultTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950369C222FAB7700056CAEA /* UserDefaultTools.swift */; };
+		950369C722FAB9D50056CAEA /* SaveKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950369C622FAB9D50056CAEA /* SaveKey.swift */; };
+		950369C822FAB9D50056CAEA /* SaveKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950369C622FAB9D50056CAEA /* SaveKey.swift */; };
+		950369C922FAB9D50056CAEA /* SaveKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950369C622FAB9D50056CAEA /* SaveKey.swift */; };
+		950369CB22FABEFD0056CAEA /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950369CA22FABEFD0056CAEA /* Dictionary+Extension.swift */; };
+		950369CC22FABEFD0056CAEA /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950369CA22FABEFD0056CAEA /* Dictionary+Extension.swift */; };
+		950369CD22FABEFD0056CAEA /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950369CA22FABEFD0056CAEA /* Dictionary+Extension.swift */; };
 		9544AA4622E85FE80062270E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9544AA4A22E85FE80062270E /* Localizable.strings */; };
 		9544AA4722E85FE80062270E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9544AA4A22E85FE80062270E /* Localizable.strings */; };
 		9544AA4822E85FE80062270E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9544AA4A22E85FE80062270E /* Localizable.strings */; };
@@ -199,6 +208,9 @@
 		950369B422FA7D070056CAEA /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
 		950369B922FA84F80056CAEA /* AlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertVC.swift; sourceTree = "<group>"; };
 		950369BA22FA84F80056CAEA /* AlertVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertVC.xib; sourceTree = "<group>"; };
+		950369C222FAB7700056CAEA /* UserDefaultTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultTools.swift; sourceTree = "<group>"; };
+		950369C622FAB9D50056CAEA /* SaveKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveKey.swift; sourceTree = "<group>"; };
+		950369CA22FABEFD0056CAEA /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		9544AA4922E85FE80062270E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9544AA4B22E860020062270E /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		95488CF722F937C4006AF9E0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -322,6 +334,7 @@
 				95488CF722F937C4006AF9E0 /* UIView+Extension.swift */,
 				95488D0322F93EF0006AF9E0 /* UIButton+Extension.swift */,
 				95488CFF22F93E3B006AF9E0 /* UIImageView+Extension.swift */,
+				950369CA22FABEFD0056CAEA /* Dictionary+Extension.swift */,
 				95EB7DCB22EFFC48005D4181 /* Codable+Extension.swift */,
 			);
 			path = Extension;
@@ -339,6 +352,7 @@
 		6C4BA76E22EB39CB00F3D792 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				950369C122FAB75C0056CAEA /* UserDefault */,
 				950369B822FA84720056CAEA /* Alert */,
 				6C3A10A822F32BA9000EBC4B /* ScrollLoadmore */,
 				95EB7DCF22EFFCA0005D4181 /* StoryBoard */,
@@ -494,6 +508,15 @@
 				950369BA22FA84F80056CAEA /* AlertVC.xib */,
 			);
 			path = Alert;
+			sourceTree = "<group>";
+		};
+		950369C122FAB75C0056CAEA /* UserDefault */ = {
+			isa = PBXGroup;
+			children = (
+				950369C222FAB7700056CAEA /* UserDefaultTools.swift */,
+				950369C622FAB9D50056CAEA /* SaveKey.swift */,
+			);
+			path = UserDefault;
 			sourceTree = "<group>";
 		};
 		9544AA4122E85DD80062270E /* Resources */ = {
@@ -938,6 +961,7 @@
 			files = (
 				95EB7DCE22EFFC48005D4181 /* Codable+Extension.swift in Sources */,
 				95488CFE22F93CBD006AF9E0 /* UIDevice+Extension.swift in Sources */,
+				950369C522FAB7700056CAEA /* UserDefaultTools.swift in Sources */,
 				95EB7DD322F003D4005D4181 /* StoryboardName.swift in Sources */,
 				6C4BA77F22EB4A9000F3D792 /* Server.swift in Sources */,
 				6C505EC022ED69B90005473C /* WindowPopup.swift in Sources */,
@@ -957,6 +981,8 @@
 				950369BD22FA84F80056CAEA /* AlertVC.swift in Sources */,
 				6C4BA76D22EB398300F3D792 /* CommonEnum.swift in Sources */,
 				6CE3038D22E46E5900C3E77A /* ViewController.swift in Sources */,
+				950369C922FAB9D50056CAEA /* SaveKey.swift in Sources */,
+				950369CD22FABEFD0056CAEA /* Dictionary+Extension.swift in Sources */,
 				6C3A10A722F31C8B000EBC4B /* Common.swift in Sources */,
 				6C374CCB22EC4406006D3068 /* Request.swift in Sources */,
 				6C4BA79322EB58A000F3D792 /* CreateUserReq.swift in Sources */,
@@ -994,6 +1020,7 @@
 			files = (
 				95EB7DCC22EFFC48005D4181 /* Codable+Extension.swift in Sources */,
 				95488CFC22F93CBD006AF9E0 /* UIDevice+Extension.swift in Sources */,
+				950369C322FAB7700056CAEA /* UserDefaultTools.swift in Sources */,
 				95EB7DD122F003D4005D4181 /* StoryboardName.swift in Sources */,
 				6C4BA77D22EB4A9000F3D792 /* Server.swift in Sources */,
 				6C505EBE22ED69B90005473C /* WindowPopup.swift in Sources */,
@@ -1013,6 +1040,8 @@
 				950369BB22FA84F80056CAEA /* AlertVC.swift in Sources */,
 				6C4BA76B22EB398300F3D792 /* CommonEnum.swift in Sources */,
 				959E02F422E6F91500FF53CE /* ViewController.swift in Sources */,
+				950369C722FAB9D50056CAEA /* SaveKey.swift in Sources */,
+				950369CB22FABEFD0056CAEA /* Dictionary+Extension.swift in Sources */,
 				6C3A10A522F31C8B000EBC4B /* Common.swift in Sources */,
 				6C374CC922EC4406006D3068 /* Request.swift in Sources */,
 				6C4BA79122EB58A000F3D792 /* CreateUserReq.swift in Sources */,
@@ -1034,6 +1063,7 @@
 			files = (
 				95EB7DCD22EFFC48005D4181 /* Codable+Extension.swift in Sources */,
 				95488CFD22F93CBD006AF9E0 /* UIDevice+Extension.swift in Sources */,
+				950369C422FAB7700056CAEA /* UserDefaultTools.swift in Sources */,
 				95EB7DD222F003D4005D4181 /* StoryboardName.swift in Sources */,
 				6C4BA77E22EB4A9000F3D792 /* Server.swift in Sources */,
 				6C505EBF22ED69B90005473C /* WindowPopup.swift in Sources */,
@@ -1053,6 +1083,8 @@
 				950369BC22FA84F80056CAEA /* AlertVC.swift in Sources */,
 				6C4BA76C22EB398300F3D792 /* CommonEnum.swift in Sources */,
 				959E030522E6FC3C00FF53CE /* ViewController.swift in Sources */,
+				950369C822FAB9D50056CAEA /* SaveKey.swift in Sources */,
+				950369CC22FABEFD0056CAEA /* Dictionary+Extension.swift in Sources */,
 				6C3A10A622F31C8B000EBC4B /* Common.swift in Sources */,
 				6C374CCA22EC4406006D3068 /* Request.swift in Sources */,
 				6C4BA79222EB58A000F3D792 /* CreateUserReq.swift in Sources */,

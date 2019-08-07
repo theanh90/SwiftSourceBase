@@ -93,9 +93,9 @@ class ViewController: UIViewController {
         })
         .disposed(by: bag)
 
-        viewModel.userInfo.subscribe(onNext: { (user) in
+        viewModel.userInfo.subscribe(onNext: {[weak self] (user) in
             WindowPopup.hideLoading()
-            Logger.info("---xxx Ok roi: \(user)")
+            self?.handleUserInfo(user: user)
         })
         .disposed(by: bag)
 
@@ -112,10 +112,21 @@ class ViewController: UIViewController {
         .disposed(by: bag)
     }
     
+    private func handleUserInfo(user: UserModel?) {
+        if let user = user {
+            UserDefaultTools.userInfo = user
+        }
+        Logger.info("Get user info successfully")
+    }
+    
     private func handleLoginSuccess(data: LoginData) {
         Logger.warning("login data: \(data)")
         WindowPopup.showAlert("Login thành công rồi", title: "Chúc mừng", yesBlock: {
             print("---xxx yes rồi")
+            // save token
+            if let token = data.token {
+                UserDefaultTools.accessToken = token
+            }
         }) {
             print("---xxx no rồi")
         }

@@ -124,7 +124,8 @@ struct NetworkUtils<T: Codable> {
         // Default header
         var defaultHeader = ["Accept": "application/json"]
             // token
-        defaultHeader.updateValue("Barer tokenxxxyyy", forKey: "Authorization")
+        let token = UserDefaultTools.accessToken
+        defaultHeader.updateValue("Bearer \(token)", forKey: "Authorization")
         
         // Custom header
         if let header = header {
