@@ -12,6 +12,7 @@ def shared_pods
   pod 'Kingfisher'
   pod 'IQKeyboardManagerSwift'
   pod 'GoogleSignIn'
+  pod 'FBSDKLoginKit'
 end
 
 target 'SwiftSourceBase' do

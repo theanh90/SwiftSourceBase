@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftSourceBase/ViewController/ViewController.swift"
-            timestampString = "586869060.200175"
+            timestampString = "587037537.241701"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
-            landmarkName = "sign(_:didSignInFor:withError:)"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
+            landmarkName = "signInWithFacebook()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftSourceBase/ViewController/ViewController.swift"
-            timestampString = "586869060.200554"
+            timestampString = "587037537.2420141"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "181"
-            endingLineNumber = "181"
-            landmarkName = "sign(_:didSignInFor:withError:)"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
+            landmarkName = "getFBUserInfo()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftSourceBase/ViewController/ViewController.swift"
+            timestampString = "587037537.242224"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
+            landmarkName = "getFBUserInfo()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

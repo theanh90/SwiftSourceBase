@@ -1,5 +1,13 @@
 PODS:
   - Alamofire (4.8.2)
+  - FBSDKCoreKit (5.3.0):
+    - FBSDKCoreKit/Basics (= 5.3.0)
+    - FBSDKCoreKit/Core (= 5.3.0)
+  - FBSDKCoreKit/Basics (5.3.0)
+  - FBSDKCoreKit/Core (5.3.0):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (5.3.0):
+    - FBSDKCoreKit (~> 5.0)
   - GoogleSignIn (4.4.0):
     - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
     - "GoogleToolboxForMac/NSString+URLArguments (~> 2.1)"
@@ -29,6 +37,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - FBSDKLoginKit
   - GoogleSignIn
   - IQKeyboardManagerSwift
   - Kingfisher
@@ -41,6 +50,8 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - FBSDKCoreKit
+    - FBSDKLoginKit
     - GoogleSignIn
     - GoogleToolboxForMac
     - GTMSessionFetcher
@@ -55,6 +66,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  FBSDKCoreKit: 39748deefe37a005f983722e433be2ddcdd83ae7
+  FBSDKLoginKit: bc0329e10045789e8d40b12d4f15ddbd07a898e2
   GoogleSignIn: 7ff245e1a7b26d379099d3243a562f5747e23d39
   GoogleToolboxForMac: b3553629623a3b1bff17f555e736cd5a6d95ad55
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
@@ -67,6 +80,6 @@ SPEC CHECKSUMS:
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   SwiftLint: 79d48a17c6565dc286c37efb8322c7b450f95c67
 
-PODFILE CHECKSUM: f0c5065d4b0d55f4870d92dbd6a22c41c861ad4c
+PODFILE CHECKSUM: 5db4640d5009780958bd4f4c6e2a6e3694948741
 
 COCOAPODS: 1.7.5

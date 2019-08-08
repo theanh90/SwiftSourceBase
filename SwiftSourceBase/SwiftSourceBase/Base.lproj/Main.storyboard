@@ -117,11 +117,20 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIG-uq-8nd">
+                                <rect key="frame" x="112.5" y="461.5" width="150" height="30"/>
+                                <color key="backgroundColor" red="0.30588235289999999" green="0.58039215690000001" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Login with Facebook">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.30741450393634984" green="0.66666668653488159" blue="0.62812916183286138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Dgf-sv-GHk" firstAttribute="top" secondItem="YHy-yw-Eh0" secondAttribute="bottom" constant="10" id="0ZH-uB-VWG"/>
                             <constraint firstItem="Lmj-TR-50M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="980-BY-7HO"/>
+                            <constraint firstItem="CIG-uq-8nd" firstAttribute="top" secondItem="JWA-fZ-MPA" secondAttribute="bottom" constant="10" id="9aT-MN-isQ"/>
                             <constraint firstItem="JWA-fZ-MPA" firstAttribute="top" secondItem="pwd-W9-dOn" secondAttribute="bottom" constant="10" id="EcF-cw-pfE"/>
                             <constraint firstItem="pYS-fi-fCS" firstAttribute="top" secondItem="xkx-kj-4KA" secondAttribute="bottom" constant="10" id="FkO-FF-kS9"/>
                             <constraint firstItem="Dgf-sv-GHk" firstAttribute="centerX" secondItem="YHy-yw-Eh0" secondAttribute="centerX" id="KhV-ug-B8T"/>
@@ -134,6 +143,7 @@
                             <constraint firstItem="pYS-fi-fCS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="WTw-JW-Bbs"/>
                             <constraint firstItem="xkx-kj-4KA" firstAttribute="top" secondItem="Lmj-TR-50M" secondAttribute="bottom" constant="10" id="iFj-tX-JM3"/>
                             <constraint firstItem="Lmj-TR-50M" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="in7-ee-4Qb"/>
+                            <constraint firstItem="CIG-uq-8nd" firstAttribute="centerX" secondItem="JWA-fZ-MPA" secondAttribute="centerX" id="lkq-n5-p7r"/>
                             <constraint firstItem="pwd-W9-dOn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mSb-FL-9EX"/>
                             <constraint firstItem="jnU-uE-ru3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="md7-9y-84q"/>
                             <constraint firstItem="pwd-W9-dOn" firstAttribute="top" secondItem="jnU-uE-ru3" secondAttribute="bottom" constant="10" id="niY-gN-5Ji"/>
@@ -143,6 +153,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Xi1-2e-v4B"/>
                     <connections>
+                        <outlet property="facebookLoginButton" destination="CIG-uq-8nd" id="PDy-yl-wnP"/>
                         <outlet property="getButton" destination="RTb-c6-AK5" id="37N-Le-zbL"/>
                         <outlet property="googleLoginButton" destination="JWA-fZ-MPA" id="Fer-Fe-i7g"/>
                         <outlet property="greetingLabel" destination="Lmj-TR-50M" id="VwV-FP-hiU"/>

@@ -11,6 +11,8 @@ import RxSwift
 import RxCocoa
 import Localize
 import GoogleSignIn
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var serverLabel: UILabel!
@@ -21,6 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var userListButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var googleLoginButton: UIButton!
+    @IBOutlet weak var facebookLoginButton: UIButton!
     
     // MARK: - Private variable
     let bag = DisposeBag()
@@ -98,6 +101,12 @@ class ViewController: UIViewController {
             })
             .disposed(by: bag)
 
+        facebookLoginButton.rx.controlEvent(.touchUpInside)
+            .subscribe(onNext: {[weak self] (_) in
+                self?.signInWithFacebook()
+            })
+            .disposed(by: bag)
+        
         // Receive data
         viewModel.errorString.subscribe(onNext: { (error) in
             WindowPopup.hideLoading()
@@ -162,6 +171,54 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: - Facebook sign in
+extension ViewController {
+    private func signInWithFacebook() {
+        let loginManager = LoginManager()
+        
+        loginManager.logIn(permissions: ["email", "public_profile"], from: self) {[weak self] (result, error) in
+            guard let `self` = self else { return }
+            Logger.info("resurl - \(result)")
+            Logger.info("error - \(error)")
+            
+            if error == nil {
+                let fbloginresult : LoginManagerLoginResult = result!
+                
+                if !fbloginresult.isCancelled {
+                    // save token
+//                    self.socialToken = fbloginresult.token.tokenString
+//                    self.returnFBUserData()
+                }
+            } else {
+                WindowPopup.showAlert(error?.localizedDescription ?? "")
+//                self.showConfirmAlert(message: (error?.localizedDescription)!, handler: {})
+            }
+        }
+    }
+    
+    private func getFBUserInfo() {
+        if AccessToken.current != nil {
+            let request = GraphRequest(graphPath: "me",
+                                       parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email, gender, birthday"])
+            request.start(completionHandler: { [weak self] (_, result, error) in
+                guard let `self` = self else { return }
+                
+                if (error == nil) {
+                    if let resultDict = result as? [String: Any] {
+//                        self.userSocialProfile = resultDict
+//                        if let socialID = resultDict["id"] as? String {
+//                            self.currentSocialDriver = .FB
+//                            self.serviceCheckSocialIdIsExist(socialId: socialID)
+//                        } else {
+//                            self.showConfirmAlert(message: "Cannot get social ID", handler: {})
+//                        }
+                    }
+                }
+            })
+        }
+    }
+}
+
 // MARK: - Google sign in
 extension ViewController: GIDSignInDelegate, GIDSignInUIDelegate {
     func sign(_ signIn: GIDSignIn!,
@@ -178,7 +235,7 @@ extension ViewController: GIDSignInDelegate, GIDSignInUIDelegate {
             let familyName = user.profile.familyName
             let email = user.profile.email
             // ...
-            Logger.info("ssssss")
+            Logger.info("\(user)")
         }
     }
     

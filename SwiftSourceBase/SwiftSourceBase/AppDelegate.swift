@@ -10,6 +10,7 @@ import UIKit
 import Localize
 import IQKeyboardManagerSwift
 import GoogleSignIn
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -33,13 +34,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Config Google sign in
         GIDSignIn.sharedInstance().clientID = GoogleKey.clientId
         
+        // Config Facebook sign in
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
         return true
     }
     
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        return GIDSignIn.sharedInstance().handle(url as URL?,
-                                                 sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
-                                                 annotation: options[UIApplication.OpenURLOptionsKey.annotation])
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+        if url.absoluteString.contains(GoogleKey.revertClientId) {
+            return GIDSignIn.sharedInstance().handle(url as URL?,
+                                                     sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+                                                     annotation: options[UIApplication.OpenURLOptionsKey.annotation])
+        } else if url.absoluteString.contains(FacebookKey.fbId) {
+            return ApplicationDelegate.shared.application(app,
+                                                          open: url,
+                                                          sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+                                                          annotation: options[UIApplication.OpenURLOptionsKey.annotation])
+        }
+        
+        return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
