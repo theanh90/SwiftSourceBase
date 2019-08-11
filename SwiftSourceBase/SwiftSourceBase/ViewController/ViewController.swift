@@ -91,7 +91,9 @@ class ViewController: UIViewController {
         
         loginButton.rx.controlEvent(.touchUpInside)
             .subscribe(onNext: {[weak self] (_) in
-                self?.doLogin()
+//                self?.doLogin()
+                let loginVC = LoginVC.instantiate(name: StoryboardName.authenticate.rawValue)
+                self?.navigationController?.pushViewController(loginVC, animated: true)
             })
             .disposed(by: bag)
         
