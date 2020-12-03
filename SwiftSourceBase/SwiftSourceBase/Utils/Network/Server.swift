@@ -16,4 +16,8 @@ struct Server {
     static let apiLogin = baseUrl + "/api/login"
     
     static let apiListUser = "http://www.somaku.com/users"
+
+    // Ticket box server
+    static let apiLogin1 = "xxxx"
+    
 }

@@ -11,6 +11,7 @@ import UIKit
 enum StoryboardName: String {
     case main = "Main"
     case userStoryboard = "UserStoryboard"
+    case authenticate = "Authenticate"
 }
 
 protocol Storyboarded { }

@@ -20,6 +20,18 @@
 		6C374CD722EC80AA006D3068 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C374CD622EC80AA006D3068 /* UserViewModel.swift */; };
 		6C374CD822EC80AA006D3068 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C374CD622EC80AA006D3068 /* UserViewModel.swift */; };
 		6C374CD922EC80AA006D3068 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C374CD622EC80AA006D3068 /* UserViewModel.swift */; };
+		6C3899C52300084200344F0F /* Authenticate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3899C42300084200344F0F /* Authenticate.storyboard */; };
+		6C3899C62300084200344F0F /* Authenticate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3899C42300084200344F0F /* Authenticate.storyboard */; };
+		6C3899C72300084200344F0F /* Authenticate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3899C42300084200344F0F /* Authenticate.storyboard */; };
+		6C3899CA230008BF00344F0F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3899C9230008BF00344F0F /* LoginVC.swift */; };
+		6C3899CB230008BF00344F0F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3899C9230008BF00344F0F /* LoginVC.swift */; };
+		6C3899CC230008BF00344F0F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3899C9230008BF00344F0F /* LoginVC.swift */; };
+		6C3899CE23000BA900344F0F /* AuthenticateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3899CD23000BA900344F0F /* AuthenticateService.swift */; };
+		6C3899CF23000BA900344F0F /* AuthenticateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3899CD23000BA900344F0F /* AuthenticateService.swift */; };
+		6C3899D023000BA900344F0F /* AuthenticateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3899CD23000BA900344F0F /* AuthenticateService.swift */; };
+		6C3899D223000C9A00344F0F /* AuthenticateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3899D123000C9A00344F0F /* AuthenticateViewModel.swift */; };
+		6C3899D323000C9A00344F0F /* AuthenticateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3899D123000C9A00344F0F /* AuthenticateViewModel.swift */; };
+		6C3899D423000C9A00344F0F /* AuthenticateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3899D123000C9A00344F0F /* AuthenticateViewModel.swift */; };
 		6C3A10A122F31BD6000EBC4B /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A10A022F31BD6000EBC4B /* UserCell.swift */; };
 		6C3A10A222F31BD6000EBC4B /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A10A022F31BD6000EBC4B /* UserCell.swift */; };
 		6C3A10A322F31BD6000EBC4B /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A10A022F31BD6000EBC4B /* UserCell.swift */; };
@@ -173,6 +185,10 @@
 		6C374CCC22EC4DED006D3068 /* BaseRxNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRxNetwork.swift; sourceTree = "<group>"; };
 		6C374CD122EC7E48006D3068 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		6C374CD622EC80AA006D3068 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		6C3899C42300084200344F0F /* Authenticate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authenticate.storyboard; sourceTree = "<group>"; };
+		6C3899C9230008BF00344F0F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		6C3899CD23000BA900344F0F /* AuthenticateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateService.swift; sourceTree = "<group>"; };
+		6C3899D123000C9A00344F0F /* AuthenticateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateViewModel.swift; sourceTree = "<group>"; };
 		6C3A10A022F31BD6000EBC4B /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		6C3A10A422F31C8B000EBC4B /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		6C3A10A922F32BD5000EBC4B /* ScrollView+Loadmore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ScrollView+Loadmore.swift"; sourceTree = "<group>"; };
@@ -286,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				6C374CD122EC7E48006D3068 /* UserService.swift */,
+				6C3899CD23000BA900344F0F /* AuthenticateService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -294,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				6C374CD622EC80AA006D3068 /* UserViewModel.swift */,
+				6C3899D123000C9A00344F0F /* AuthenticateViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -305,6 +323,14 @@
 				6C505EC322ED6DBE0005473C /* LoadingVC.xib */,
 			);
 			path = Loading;
+			sourceTree = "<group>";
+		};
+		6C3899C8230008AA00344F0F /* Authenticate */ = {
+			isa = PBXGroup;
+			children = (
+				6C3899C9230008BF00344F0F /* LoginVC.swift */,
+			);
+			path = Authenticate;
 			sourceTree = "<group>";
 		};
 		6C3A109F22F31BBC000EBC4B /* User */ = {
@@ -377,6 +403,7 @@
 		6C4BA78022EB4BCD00F3D792 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6C3899C8230008AA00344F0F /* Authenticate */,
 				6C3A109F22F31BBC000EBC4B /* User */,
 				6CE3038C22E46E5900C3E77A /* ViewController.swift */,
 			);
@@ -464,7 +491,6 @@
 				9544AA4122E85DD80062270E /* Resources */,
 				959E031A22E70B2500FF53CE /* Utils */,
 				6CE3038A22E46E5900C3E77A /* AppDelegate.swift */,
-				6CE3038E22E46E5900C3E77A /* Main.storyboard */,
 				6CE3039322E46E5A00C3E77A /* LaunchScreen.storyboard */,
 			);
 			path = SwiftSourceBase;
@@ -570,6 +596,8 @@
 			isa = PBXGroup;
 			children = (
 				95EB7DD622F004D4005D4181 /* UserStoryboard.storyboard */,
+				6C3899C42300084200344F0F /* Authenticate.storyboard */,
+				6CE3038E22E46E5900C3E77A /* Main.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -734,6 +762,7 @@
 				6CE3039522E46E5A00C3E77A /* LaunchScreen.storyboard in Resources */,
 				9544AA4822E85FE80062270E /* Localizable.strings in Resources */,
 				6CE3039222E46E5A00C3E77A /* Assets.xcassets in Resources */,
+				6C3899C72300084200344F0F /* Authenticate.storyboard in Resources */,
 				6CE3039022E46E5900C3E77A /* Main.storyboard in Resources */,
 				950369C022FA84F80056CAEA /* AlertVC.xib in Resources */,
 			);
@@ -762,6 +791,7 @@
 				9544AA4622E85FE80062270E /* Localizable.strings in Resources */,
 				959E02F922E6F91500FF53CE /* LaunchScreen.storyboard in Resources */,
 				959E02FA22E6F91500FF53CE /* Assets.xcassets in Resources */,
+				6C3899C52300084200344F0F /* Authenticate.storyboard in Resources */,
 				959E02FB22E6F91500FF53CE /* Main.storyboard in Resources */,
 				950369BE22FA84F80056CAEA /* AlertVC.xib in Resources */,
 			);
@@ -776,6 +806,7 @@
 				9544AA4722E85FE80062270E /* Localizable.strings in Resources */,
 				959E030A22E6FC3C00FF53CE /* LaunchScreen.storyboard in Resources */,
 				959E030B22E6FC3C00FF53CE /* Assets.xcassets in Resources */,
+				6C3899C62300084200344F0F /* Authenticate.storyboard in Resources */,
 				959E030C22E6FC3C00FF53CE /* Main.storyboard in Resources */,
 				950369BF22FA84F80056CAEA /* AlertVC.xib in Resources */,
 			);
@@ -1026,6 +1057,7 @@
 				6C4BA78E22EB564200F3D792 /* CreateUserRes.swift in Sources */,
 				6C505ED222EDA1430005473C /* ListUserVC.swift in Sources */,
 				6C374CD422EC7E48006D3068 /* UserService.swift in Sources */,
+				6C3899D423000C9A00344F0F /* AuthenticateViewModel.swift in Sources */,
 				6C3A10A322F31BD6000EBC4B /* UserCell.swift in Sources */,
 				950369B322FA762E0056CAEA /* LoginReq.swift in Sources */,
 				95488CFA22F937C4006AF9E0 /* UIView+Extension.swift in Sources */,
@@ -1036,6 +1068,7 @@
 				6C4BA76D22EB398300F3D792 /* CommonEnum.swift in Sources */,
 				6CE3038D22E46E5900C3E77A /* ViewController.swift in Sources */,
 				950369C922FAB9D50056CAEA /* SaveKey.swift in Sources */,
+				6C3899CC230008BF00344F0F /* LoginVC.swift in Sources */,
 				950369CD22FABEFD0056CAEA /* Dictionary+Extension.swift in Sources */,
 				6C3A10A722F31C8B000EBC4B /* Common.swift in Sources */,
 				6C374CCB22EC4406006D3068 /* Request.swift in Sources */,
@@ -1048,6 +1081,7 @@
 				6C3A10AC22F32BD5000EBC4B /* ScrollView+Loadmore.swift in Sources */,
 				950369B722FA7D070056CAEA /* LoginData.swift in Sources */,
 				6C4BA78622EB4CC600F3D792 /* UserModel.swift in Sources */,
+				6C3899D023000BA900344F0F /* AuthenticateService.swift in Sources */,
 				6C3A10B022F33077000EBC4B /* LoadmoreItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1085,6 +1119,7 @@
 				6C4BA78C22EB564200F3D792 /* CreateUserRes.swift in Sources */,
 				6C505ED022EDA1430005473C /* ListUserVC.swift in Sources */,
 				6C374CD222EC7E48006D3068 /* UserService.swift in Sources */,
+				6C3899D223000C9A00344F0F /* AuthenticateViewModel.swift in Sources */,
 				6C3A10A122F31BD6000EBC4B /* UserCell.swift in Sources */,
 				950369B122FA762E0056CAEA /* LoginReq.swift in Sources */,
 				95488CF822F937C4006AF9E0 /* UIView+Extension.swift in Sources */,
@@ -1095,6 +1130,7 @@
 				6C4BA76B22EB398300F3D792 /* CommonEnum.swift in Sources */,
 				959E02F422E6F91500FF53CE /* ViewController.swift in Sources */,
 				950369C722FAB9D50056CAEA /* SaveKey.swift in Sources */,
+				6C3899CA230008BF00344F0F /* LoginVC.swift in Sources */,
 				950369CB22FABEFD0056CAEA /* Dictionary+Extension.swift in Sources */,
 				6C3A10A522F31C8B000EBC4B /* Common.swift in Sources */,
 				6C374CC922EC4406006D3068 /* Request.swift in Sources */,
@@ -1107,6 +1143,7 @@
 				6C3A10AA22F32BD5000EBC4B /* ScrollView+Loadmore.swift in Sources */,
 				950369B522FA7D070056CAEA /* LoginData.swift in Sources */,
 				6C4BA78422EB4CC600F3D792 /* UserModel.swift in Sources */,
+				6C3899CE23000BA900344F0F /* AuthenticateService.swift in Sources */,
 				6C3A10AE22F33077000EBC4B /* LoadmoreItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1128,6 +1165,7 @@
 				6C4BA78D22EB564200F3D792 /* CreateUserRes.swift in Sources */,
 				6C505ED122EDA1430005473C /* ListUserVC.swift in Sources */,
 				6C374CD322EC7E48006D3068 /* UserService.swift in Sources */,
+				6C3899D323000C9A00344F0F /* AuthenticateViewModel.swift in Sources */,
 				6C3A10A222F31BD6000EBC4B /* UserCell.swift in Sources */,
 				950369B222FA762E0056CAEA /* LoginReq.swift in Sources */,
 				95488CF922F937C4006AF9E0 /* UIView+Extension.swift in Sources */,
@@ -1138,6 +1176,7 @@
 				6C4BA76C22EB398300F3D792 /* CommonEnum.swift in Sources */,
 				959E030522E6FC3C00FF53CE /* ViewController.swift in Sources */,
 				950369C822FAB9D50056CAEA /* SaveKey.swift in Sources */,
+				6C3899CB230008BF00344F0F /* LoginVC.swift in Sources */,
 				950369CC22FABEFD0056CAEA /* Dictionary+Extension.swift in Sources */,
 				6C3A10A622F31C8B000EBC4B /* Common.swift in Sources */,
 				6C374CCA22EC4406006D3068 /* Request.swift in Sources */,
@@ -1150,6 +1189,7 @@
 				6C3A10AB22F32BD5000EBC4B /* ScrollView+Loadmore.swift in Sources */,
 				950369B622FA7D070056CAEA /* LoginData.swift in Sources */,
 				6C4BA78522EB4CC600F3D792 /* UserModel.swift in Sources */,
+				6C3899CF23000BA900344F0F /* AuthenticateService.swift in Sources */,
 				6C3A10AF22F33077000EBC4B /* LoadmoreItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

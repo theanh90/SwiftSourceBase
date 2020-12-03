@@ -42,9 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
         if url.absoluteString.contains(GoogleKey.revertClientId) {
-            return GIDSignIn.sharedInstance().handle(url as URL?,
-                                                     sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
-                                                     annotation: options[UIApplication.OpenURLOptionsKey.annotation])
+            return GIDSignIn.sharedInstance()?.handle(url as URL?) ?? false
         } else if url.absoluteString.contains(FacebookKey.fbId) {
             return ApplicationDelegate.shared.application(app,
                                                           open: url,
