@@ -491,7 +491,6 @@
 				9544AA4122E85DD80062270E /* Resources */,
 				959E031A22E70B2500FF53CE /* Utils */,
 				6CE3038A22E46E5900C3E77A /* AppDelegate.swift */,
-				6CE3038E22E46E5900C3E77A /* Main.storyboard */,
 				6CE3039322E46E5A00C3E77A /* LaunchScreen.storyboard */,
 			);
 			path = SwiftSourceBase;
@@ -598,6 +597,7 @@
 			children = (
 				95EB7DD622F004D4005D4181 /* UserStoryboard.storyboard */,
 				6C3899C42300084200344F0F /* Authenticate.storyboard */,
+				6CE3038E22E46E5900C3E77A /* Main.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";

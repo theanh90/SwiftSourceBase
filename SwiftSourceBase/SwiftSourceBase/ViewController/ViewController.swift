@@ -43,7 +43,6 @@ class ViewController: UIViewController {
         setupRx()
         
         // Google sign in
-        GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().delegate = self
     }
 
@@ -124,7 +123,7 @@ class ViewController: UIViewController {
 
         viewModel.newUser.subscribe(onNext: { (newUser) in
             WindowPopup.hideLoading()
-            Logger.info("---xxx Add successfully roi: \(newUser)")
+            Logger.info("--- Add successfully : \(newUser)")
         })
         .disposed(by: bag)
         
@@ -145,13 +144,13 @@ class ViewController: UIViewController {
     private func handleLoginSuccess(data: LoginData) {
         Logger.warning("login data: \(data)")
         WindowPopup.showAlert("Login thành công rồi", title: "Chúc mừng", yesBlock: {
-            print("---xxx yes rồi")
+            Logger.info("--- going yes")
             // save token
             if let token = data.token {
                 UserDefaultTools.accessToken = token
             }
         }) {
-            print("---xxx no rồi")
+            Logger.error("--- going NO")
         }
     }
     
@@ -222,10 +221,8 @@ extension ViewController {
 }
 
 // MARK: - Google sign in
-extension ViewController: GIDSignInDelegate, GIDSignInUIDelegate {
-    func sign(_ signIn: GIDSignIn!,
-              didSignInFor user: GIDGoogleUser!,
-              withError error: Error!) {
+extension ViewController: GIDSignInDelegate {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
             Logger.error("\(error.localizedDescription)")
         } else {
@@ -242,7 +239,8 @@ extension ViewController: GIDSignInDelegate, GIDSignInUIDelegate {
     }
     
     private func signInWithGoogle() {
+        GIDSignIn.sharedInstance().presentingViewController = self
         GIDSignIn.sharedInstance().signOut()
-        GIDSignIn.sharedInstance()?.signIn()
+        GIDSignIn.sharedInstance().signIn()
     }
 }

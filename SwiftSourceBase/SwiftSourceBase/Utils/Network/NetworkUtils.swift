@@ -24,21 +24,20 @@ struct NetworkUtils<T: Codable> {
         
         // Alamofire
         Logger.info("Api url: \(request.requestUrl)")
-        Alamofire.request(request.requestUrl,
-                          method: request.requestMethod,
-                          parameters: request.requestParam,
-                          encoding: JSONEncoding.default,
-                          headers: requestHeader)
+        
+        AF.request(request.requestUrl,
+                   method: request.requestMethod,
+                   parameters: request.requestParam,
+                   encoding: JSONEncoding.default,
+                   headers: requestHeader)
             .validate()
             .responseJSON { response in
-                if let json = response.result.value {
-                    Logger.info("JSON response: \(json)")
-                }
+                Logger.info("JSON response: \(response)")
             }
             .responseData { (response) in
                 switch response.result {
                 case .success:
-                    if let data = response.result.value {
+                    if let data = response.data {
                         // parse data
                         do {
                             let responseObject = try JSONDecoder().decode(T.self, from: data)
@@ -68,72 +67,55 @@ struct NetworkUtils<T: Codable> {
 
         // Header
         let requestHeader = self.getFullHeader(header: header)
-
-        Alamofire.upload(multipartFormData: { multipartFormData in
-            // insert data
-            for dataParam in listData {
-                multipartFormData.append(dataParam.data,
-                                         withName: dataParam.name,
-                                         fileName: dataParam.fileName,
-                                         mimeType: dataParam.mimeType)
-            }
-            // insert param
-            if let params = params {
-                for (key, value) in params {
-                    let valStr = String(describing: value)
-                    multipartFormData.append(valStr.data(using: .utf8)!, withName: key)
+                
+        if let requestConvetible = try? URLRequest(url: url, method: .post, headers: requestHeader) {
+            AF.upload(multipartFormData: { (multipartFormData) in
+                // insert data
+                for dataParam in listData {
+                    multipartFormData.append(dataParam.data,
+                                             withName: dataParam.name,
+                                             fileName: dataParam.fileName,
+                                             mimeType: dataParam.mimeType)
                 }
-            }
-        }, to: url, method: .post, headers: requestHeader, encodingCompletion: { encodingResult in
-            switch encodingResult {
-            case .success(let upload, _, _):
-                // validate
-                upload.validate()
-
-                // debug result
-                upload.responseJSON { response in
-                    if let json = response.result.value {
-                        Logger.info("JSON response: \(json)")
+                // insert param
+                if let params = params {
+                    for (key, value) in params {
+                        let valStr = String(describing: value)
+                        multipartFormData.append(valStr.data(using: .utf8)!, withName: key)
                     }
                 }
-
-                // handle result
-                upload.response { response in
-                    if let data = response.data {
-                        // parse data
-                        do {
-                            let responseObject = try JSONDecoder().decode(T.self, from: data)
-                            successClosure(responseObject)
-                        } catch {
-                            Logger.error("Parse object error: \(error.localizedDescription)")
-                            failClosure(error)
-                        }
-                    } else {
-                        let error = NSError(domain: "No data was returned", code: -1, userInfo: nil)
-                        Logger.error("API FAIL: No data was returned")
+            }, with: requestConvetible)
+            .responseJSON { (json) in
+                Logger.info("JSON response: \(json)")
+            }
+            .responseData { (response) in
+                switch response.result {
+                case .success(let data):
+                    // parse data
+                    do {
+                        let responseObject = try JSONDecoder().decode(T.self, from: data)
+                        successClosure(responseObject)
+                    } catch {
+                        Logger.error("Parse object error: \(error.localizedDescription)")
                         failClosure(error)
                     }
+                case .failure(let error):
+                    failClosure(error)
                 }
-            case .failure(let error):
-                failClosure(error)
-            }
-        })
-    }
-    
-    static private func getFullHeader(header: HTTPHeaders?) -> [String: String] {
-        // Default header
-        var defaultHeader = ["Accept": "application/json"]
-            // token
-        let token = UserDefaultTools.accessToken
-        defaultHeader.updateValue("Bearer \(token)", forKey: "Authorization")
-        
-        // Custom header
-        if let header = header {
-            for (key, value) in header {
-                defaultHeader[key] = value
             }
         }
+    }
+    
+    static private func getFullHeader(header: HTTPHeaders?) -> HTTPHeaders? {
+        var updatedHeader = header
         
-        return defaultHeader
+        // Default header
+        updatedHeader?.add(name: "Accept", value: "application/json")
+        
+        // token
+        let token = UserDefaultTools.accessToken
+        updatedHeader?.add(name: "Authorization", value: "Bearer \(token)")
+        
+        return updatedHeader
     }
 }
